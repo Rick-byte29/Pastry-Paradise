@@ -444,33 +444,248 @@
 <script>
   // --- PRODUCT DATA (Inspired by Theobroma) ---
  const products = [
-  { id:1, name:"Chocoholic Pastry #1", desc:"Dark, milk & white chocolate mousse on a soft base. Rich & decadent.", price:230, img:"https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&w=400&q=80", badges:["Imported Flavour","Fruit Special"] },
-  { id:2, name:"Fresh Pineapple #2", desc:"Vanilla sponge with fresh cream & pineapple compote. Light & zesty.", price:175, img:"https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&w=400&q=80", badges:["Fresh","Eggless Available"] },
-  { id:3, name:"Hazelnut Praline #3", desc:"Hazelnut praline chocolate mousse & crunchy hazelnuts.", price:210, img:"https://images.unsplash.com/photo-1464347744102-94e29a552fdd?auto=format&w=400&q=80", badges:["New","Eggless Available"] },
-  { id:4, name:"Red Velvet Slice #4", desc:"Classic cocoa & buttermilk sponge, cream cheese frosting.", price:195, img:"https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&w=400&q=80", badges:["Classic"] },
-  { id:5, name:"Baked Cheesecake #5", desc:"Mini New York style cheesecake on buttery biscuit base.", price:250, img:"https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&w=400&q=80", badges:["Eggless Available"] },
-  { id:6, name:"Opera Pastry #6", desc:"Layers of almond sponge with coffee & dark chocolate ganache.", price:265, img:"https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&w=400&q=80", badges:["Classic","Eggless Available"] },
-  { id:7, name:"Dutch Truffle #7", desc:"Decadent chocolate truffle pastry with a glazed finish.", price:235, img:"https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&w=400&q=80", badges:["Imported Flavour","Fruit Special"] },
-  { id:8, name:"Blueberry Cheesecake #8", desc:"Creamy cheesecake with a vibrant blueberry compote.", price:240, img:"https://images.unsplash.com/photo-1464347744102-94e29a552fdd?auto=format&w=400&q=80", badges:["Fresh"] },
-  { id:9, name:"Strawberry Pastry #9", desc:"Soft sponge cake layered with fresh strawberry cream.", price:195, img:"https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&w=400&q=80", badges:["New"] },
-  { id:10, name:"Tiramisu Slice #10", desc:"Coffee-soaked sponge, mascarpone cream, cocoa dust.", price:245, img:"https://images.unsplash.com/photo-1519865273-3fe8a3b90a38?auto=format&w=400&q=80", badges:["Fruit Special","Bestseller"] },
-  { id:11, name:"Chocoholic Pastry #11", desc:"Dark, milk & white chocolate mousse on a soft base. Rich & decadent.", price:225, img:"https://images.unsplash.com/photo-1514516870922-7204c6e49a6f?auto=format&w=400&q=80", badges:["New","Popular"] },
-  { id:12, name:"Fresh Pineapple #12", desc:"Vanilla sponge with fresh cream & pineapple compote. Light & zesty.", price:175, img:"https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&w=400&q=80", badges:["Popular","Fruit Special"] },
-  { id:13, name:"Hazelnut Praline #13", desc:"Hazelnut praline chocolate mousse & crunchy hazelnuts.", price:225, img:"https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&w=400&q=80", badges:["Imported Flavour"] },
-  { id:14, name:"Red Velvet Slice #14", desc:"Classic cocoa & buttermilk sponge, cream cheese frosting.", price:225, img:"https://images.unsplash.com/photo-1429554429301-01bcd64c0d38?auto=format&w=400&q=80", badges:["Classic","Imported Flavour"] },
-  { id:15, name:"Baked Cheesecake #15", desc:"Mini New York style cheesecake on buttery biscuit base.", price:250, img:"https://images.unsplash.com/photo-1429554429301-01bcd64c0d38?auto=format&w=400&q=80", badges:["Special"] },
-  { id:16, name:"Opera Pastry #16", desc:"Layers of almond sponge with coffee & dark chocolate ganache.", price:245, img:"https://images.unsplash.com/photo-1514516870922-7204c6e49a6f?auto=format&w=400&q=80", badges:["Bestseller","Classic"] },
-  { id:17, name:"Dutch Truffle #17", desc:"Decadent chocolate truffle pastry with a glazed finish.", price:230, img:"https://images.unsplash.com/photo-1519864600265-abb234d1c9fa?auto=format&w=400&q=80", badges:["Special","Imported Flavour"] },
-  { id:18, name:"Blueberry Cheesecake #18", desc:"Creamy cheesecake with a vibrant blueberry compote.", price:275, img:"https://images.unsplash.com/photo-1504739995753-f1e4ab70f6c0?auto=format&w=400&q=80", badges:["Popular"] },
-  { id:19, name:"Strawberry Pastry #19", desc:"Soft sponge cake layered with fresh strawberry cream.", price:195, img:"https://images.unsplash.com/photo-1504739995753-f1e4ab70f6c0?auto=format&w=400&q=80", badges:["Fresh"] },
-  { id:20, name:"Tiramisu Slice #20", desc:"Coffee-soaked sponge, mascarpone cream, cocoa dust.", price:240, img:"https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&w=400&q=80", badges:["New","Imported Flavour"] },
-  // ...continue this pattern for items 21–50 using the unique id, rotating names/desc/prices/images/badges
-  { id:21, name:"Chocoholic Pastry #21", desc:"Dark, milk & white chocolate mousse on a soft base. Rich & decadent.", price:210, img:"https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&w=400&q=80", badges:["New"] },
-  { id:22, name:"Fresh Pineapple #22", desc:"Vanilla sponge with fresh cream & pineapple compote. Light & zesty.", price:210, img:"https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&w=400&q=80", badges:["Popular","Fruit Special"] },
-  { id:23, name:"Hazelnut Praline #23", desc:"Hazelnut praline chocolate mousse & crunchy hazelnuts.", price:210, img:"https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&w=400&q=80", badges:["Bestseller"] },
-  { id:24, name:"Red Velvet Slice #24", desc:"Classic cocoa & buttermilk sponge, cream cheese frosting.", price:225, img:"https://images.unsplash.com/photo-1464306076886-debca5e8a6b0?auto=format&w=400&q=80", badges:["Fresh","Popular"] },
-  // ...truncated for brevity, but your script should include all up to id:50, each with unique #number
+  {
+    id: 1,
+    name: "Chocolate Fudge Cake",
+    desc: "Rich and moist chocolate fudge cake topped with creamy chocolate ganache.",
+    price: 250,
+    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&w=400&q=80",
+    badges: ["Bestseller"]
+  },
+  {
+    id: 2,
+    name: "Classic Strawberry Shortcake",
+    desc: "Fluffy sponge cake layered with fresh strawberries and whipped cream.",
+    price: 230,
+    img: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&w=400&q=80",
+    badges: ["Fresh"]
+  },
+  {
+    id: 3,
+    name: "New York Cheesecake",
+    desc: "Creamy and dense cheesecake with a buttery graham cracker crust.",
+    price: 275,
+    img: "https://images.unsplash.com/photo-1523983303491-2e7e60ad2343?auto=format&w=400&q=80",
+    badges: ["Classic"]
+  },
+  {
+    id: 4,
+    name: "Lemon Drizzle Cake",
+    desc: "Zesty lemon sponge cake with a tangy lemon glaze topping.",
+    price: 210,
+    img: "https://images.unsplash.com/photo-1502741338009-cac2772e18bc?auto=format&w=400&q=80",
+    badges: ["Fresh", "Eggless"]
+  },
+  {
+    id: 5,
+    name: "Raspberry Almond Tart",
+    desc: "Buttery tart filled with almond cream and fresh raspberries.",
+    price: 265,
+    img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&w=400&q=80",
+    badges: ["Fruit Special"]
+  },
+  {
+    id: 6,
+    name: "Chocolate Eclair",
+    desc: "Classic éclair filled with rich chocolate cream and topped with chocolate icing.",
+    price: 180,
+    img: "https://images.unsplash.com/photo-1519865273-3fe8a3b90a38?auto=format&w=400&q=80",
+    badges: ["Popular"]
+  },
+  {
+    id: 7,
+    name: "Carrot Walnut Cake",
+    desc: "Moist carrot cake loaded with walnuts and cream cheese frosting.",
+    price: 240,
+    img: "https://images.unsplash.com/photo-1457296898342-cdd24585d095?auto=format&w=400&q=80",
+    badges: ["Healthy"]
+  },
+  {
+    id: 8,
+    name: "Tiramisu Slice",
+    desc: "Coffee-soaked sponge layered with mascarpone cream and cocoa powder.",
+    price: 260,
+    img: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&w=400&q=80",
+    badges: ["Imported Flavour"]
+  },
+  {
+    id: 9,
+    name: "Blueberry Muffin",
+    desc: "Freshly baked muffin loaded with juicy blueberries.",
+    price: 140,
+    img: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&w=400&q=80",
+    badges: ["Fresh"]
+  },
+  {
+    id: 10,
+    name: "Vanilla Cupcake",
+    desc: "Classic vanilla cupcake topped with smooth buttercream frosting.",
+    price: 160,
+    img: "https://images.unsplash.com/photo-1559622213-552c15bb27c6?auto=format&w=400&q=80",
+    badges: ["Popular"]
+  },
+  {
+    id: 11,
+    name: "Matcha Green Tea Cake",
+    desc: "Delicate green tea sponge cake with matcha frosting.",
+    price: 270,
+    img: "https://images.unsplash.com/photo-1505253210349-1f128bf7fc1b?auto=format&w=400&q=80",
+    badges: ["Trendy"]
+  },
+  {
+    id: 12,
+    name: "Salted Caramel Brownie",
+    desc: "Dense chocolate brownie topped with salted caramel drizzle.",
+    price: 220,
+    img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&w=400&q=80",
+    badges: ["Bestseller"]
+  },
+  {
+    id: 13,
+    name: "Pistachio Cream Puff",
+    desc: "Light and airy cream puff filled with pistachio cream.",
+    price: 200,
+    img: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&w=400&q=80",
+    badges: ["Nutty"]
+  },
+  {
+    id: 14,
+    name: "Cinnamon Roll",
+    desc: "Soft roll swirled with cinnamon and topped with cream cheese icing.",
+    price: 190,
+    img: "https://images.unsplash.com/photo-1432139555190-58524dae6a55?auto=format&w=400&q=80",
+    badges: ["Classic"]
+  },
+  {
+    id: 15,
+    name: "Strawberry Cheesecake",
+    desc: "Creamy cheesecake topped with fresh strawberries.",
+    price: 280,
+    img: "https://images.unsplash.com/photo-1523983303491-2e7e60ad2343?auto=format&w=400&q=80",
+    badges: ["Fruit Special"]
+  },
+  {
+    id: 16,
+    name: "Banana Nut Bread",
+    desc: "Moist banana bread loaded with crunchy nuts.",
+    price: 210,
+    img: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?auto=format&w=400&q=80",
+    badges: ["Healthy"]
+  },
+  {
+    id: 17,
+    name: "Chocolate Chip Cookie",
+    desc: "Chewy cookie loaded with dark chocolate chips.",
+    price: 130,
+    img: "https://images.unsplash.com/photo-1590080877777-7cec104899e8?auto=format&w=400&q=80",
+    badges: ["Popular"]
+  },
+  {
+    id: 18,
+    name: "Lemon Meringue Tart",
+    desc: "Tangy lemon filling topped with fluffy meringue.",
+    price: 260,
+    img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&w=400&q=80",
+    badges: ["Fresh"]
+  },
+  {
+    id: 19,
+    name: "Red Velvet Cupcake",
+    desc: "Red velvet cupcake with cream cheese frosting.",
+    price: 170,
+    img: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&w=400&q=80",
+    badges: ["Popular"]
+  },
+  {
+    id: 20,
+    name: "Almond Croissant",
+    desc: "Flaky croissant filled with almond cream.",
+    price: 220,
+    img: "https://images.unsplash.com/photo-1519864600265-abb234d1c9fa?auto=format&w=400&q=80",
+    badges: ["Classic"]
+  },
+  {
+    id: 21,
+    name: "Chocolate Lava Cake",
+    desc: "Warm chocolate cake with a gooey molten center.",
+    price: 280,
+    img: "https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&w=400&q=80",
+    badges: ["Bestseller"]
+  },
+  {
+    id: 22,
+    name: "Pumpkin Spice Muffin",
+    desc: "Moist muffin seasoned with pumpkin spice.",
+    price: 160,
+    img: "https://images.unsplash.com/photo-1559622213-552c15bb27c6?auto=format&w=400&q=80",
+    badges: ["Seasonal"]
+  },
+  {
+    id: 23,
+    name: "Coconut Macarons",
+    desc: "Delicate macarons with a coconut filling.",
+    price: 210,
+    img: "https://images.unsplash.com/photo-1505253210349-1f128bf7fc1b?auto=format&w=400&q=80",
+    badges: ["Trendy"]
+  },
+  {
+    id: 24,
+    name: "Peach Cobbler",
+    desc: "Warm cobbler with fresh peaches and cinnamon.",
+    price: 230,
+    img: "https://images.unsplash.com/photo-1457296898342-cdd24585d095?auto=format&w=400&q=80",
+    badges: ["Fruit Special"]
+  },
+  {
+    id: 25,
+    name: "Raspberry Cheesecake",
+    desc: "Creamy cheesecake topped with fresh raspberries.",
+    price: 280,
+    img: "https://images.unsplash.com/photo-1523983303491-2e7e60ad2343?auto=format&w=400&q=80",
+    badges: ["Popular"]
+  },
+  {
+    id: 26,
+    name: "Maple Pecan Tart",
+    desc: "Sweet tart filled with maple syrup and pecans.",
+    price: 260,
+    img: "https://images.unsplash.com/photo-1542831371-29b0f74f9713?auto=format&w=400&q=80",
+    badges: ["Nutty"]
+  },
+  {
+    id: 27,
+    name: "Orange Chocolate Biscotti",
+    desc: "Crunchy biscotti with orange zest and chocolate chunks.",
+    price: 170,
+    img: "https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&w=400&q=80",
+    badges: ["Classic"]
+  },
+  {
+    id: 28,
+    name: "Cherry Danish",
+    desc: "Flaky Danish pastry filled with cherry preserves.",
+    price: 220,
+    img: "https://images.unsplash.com/photo-1519865273-3fe8a3b90a38?auto=format&w=400&q=80",
+    badges: ["Popular"]
+  },
+  {
+    id: 29,
+    name: "Coffee Cake",
+    desc: "Soft cake with cinnamon sugar topping.",
+    price: 240,
+    img: "https://images.unsplash.com/photo-1493809842364-78817add7ffb?auto=format&w=400&q=80",
+    badges: ["Classic"]
+  },
+  {
+    id: 30,
+    name: "Berry Tartlet",
+    desc: "Mini tart filled with fresh mixed berries.",
+    price: 210,
+    img: "https://images.unsplash.com/photo-1457296898342-cdd24585d095?auto=format&w=400&q=80",
+    badges: ["Fresh"]
+  }
 ];
+
 
   // --- CAROUSEL ---
 
